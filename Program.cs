@@ -5,7 +5,7 @@ int cantTareas = random.Next(1, 8);
 int opcion;
 int idTareaBuscada;
 string? linea;
-bool hayoTarea = true;
+bool hayoTarea = false;
 
 List<Tarea> ListaTareasPendientes = new List<Tarea>();
 List<Tarea> ListaTareasRealizadas = new List<Tarea>();
