@@ -19,7 +19,7 @@ static void mostrarPendientes(List<Tarea> ListaTareasPendientes)
 {
     foreach (Tarea tarea in ListaTareasPendientes)
     {
-        Console.WriteLine($"ID: {tarea.TareaID}, Descripcion: {tarea.Descripcion}, Duracion: {tarea.Duracion}, Estado: {tarea.Estado1}");
+        Console.WriteLine($"ID: {tarea.TareaID}, Descripcion: {tarea.Descripcion}, Duracion: {tarea.Duracion}, Estado: {tarea.EstadoActual}.");
     }
 }
 
@@ -27,6 +27,6 @@ static void mostrarRealizadas(List<Tarea> ListaTareasRealizadas)
 {
     foreach (Tarea tarea in ListaTareasRealizadas)
     {
-        Console.WriteLine($"ID: {tarea.TareaID}, Descripcion: {tarea.Descripcion}, Duracion: {tarea.Duracion}, Estado: {tarea.Estado1}");
+        Console.WriteLine($"ID: {tarea.TareaID}, Descripcion: {tarea.Descripcion}, Duracion: {tarea.Duracion}, Estado: {tarea.EstadoActual}.");
     }
 }
