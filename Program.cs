@@ -5,7 +5,7 @@ int cantTareas = random.Next(1, 8);
 int opcion;
 int idTareaBuscada;
 string? linea;
-bool hayoTarea = false;
+bool hayoTarea = true;
 
 List<Tarea> ListaTareasPendientes = new List<Tarea>();
 List<Tarea> ListaTareasRealizadas = new List<Tarea>();
@@ -34,6 +34,7 @@ do
                     {
                         if (opcion == 1)
                         {
+                            Console.WriteLine("Inserte la descripcion de la tarea que desea buscar");
                             linea = Console.ReadLine();
                             hayoTarea = mostarPorDescripcion(linea, hayoTarea, ListaTareasPendientes);
                             if (!hayoTarea)
@@ -41,10 +42,19 @@ do
                                 Console.WriteLine("No se encontro ninguna tarea con esa descripcion");
                             }
                         }
+                        else if (opcion == 2)
+                        {
+                            Console.WriteLine("Volviendo al inicio del programa");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Inserte un numero valido para operar");
                     }
                 }
             }
-            else {
+            else
+            {
                 Console.WriteLine("Inserte un numero valido para operar");
             }
         }
