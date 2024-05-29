@@ -9,10 +9,10 @@ namespace espacioTareas
         private int duracion;
         private EstadoTarea Estado;
 
-        public int TareaID { get => tareaID; set => tareaID = value; }
-        public string Descripcion { get => descripcion; set => descripcion = value; }
-        public int Duracion { get => duracion; set => duracion = value; }
-        public EstadoTarea EstadoActual { get => Estado; set => Estado = value; }
+        public int TareaID { get => tareaID; }
+        public string Descripcion { get => descripcion; }
+        public int Duracion { get => duracion; }
+        public EstadoTarea EstadoActual { get => Estado; }
 
         public Tarea()
         {
@@ -22,7 +22,7 @@ namespace espacioTareas
             this.tareaID = tareaID;
             this.descripcion = descripcion;
             this.duracion = duracion;
-            this.Estado = estado;        
+            Estado = estado;        
         }
     }
 }
