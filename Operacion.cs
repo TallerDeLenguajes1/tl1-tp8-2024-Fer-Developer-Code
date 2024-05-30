@@ -1,9 +1,9 @@
 namespace EspacioOperacion
 {
-    public class TipoOperacion{
+    public class Operacion{
         private double resultadoAnterior;
         private double nuevoValor;
-        private TipoOperacion? operacion;
+        private TipoOperacion operacion;
         public double Resultado{
             get{
                 return resultadoAnterior;
