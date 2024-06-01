@@ -1,14 +1,13 @@
 ﻿using EspacioCalculadora;
-using EspacioOperacion;
 double termino;
 int opcion;
 string? linea;
 Calculadora calcular = new Calculadora();
 do
 {
+    Console.WriteLine("opciones a elegir\n\t1.Sumar\n\t2.Restar\n\t3.Multiplicar\n\t4.Dividir\n\t5.Limpiar\n\t6.Mostrar historial\n\t7.Salir\nEscriba aca la opcion");
     linea = Console.ReadLine();
-    if (int.TryParse(linea, out opcion))
-        Console.WriteLine("opciones a elegir\n\t1.Sumar\n\t2.Restar\n\t3.Multiplicar\n\t4.Dividir\n\t5.Limpiar\n\t6.Mostrar historial\n\t7.Salir\nEscriba aca la opcion");
+    if (int.TryParse(linea, out opcion) && opcion <=1 && opcion<= 7)
     {
         Console.WriteLine("Ingrese un valor para operar");
         linea = Console.ReadLine();
@@ -33,7 +32,7 @@ do
                     break;
                 case 6:
                     Console.WriteLine("Historial de operaciones");
-                    foreach (Operacion operacionIndividual in calcular.HistorialOperaciones)
+                    foreach (var operacionIndividual in calcular.HistorialOperaciones)
                     {
                         Console.WriteLine(operacionIndividual.ToString());
                     }
