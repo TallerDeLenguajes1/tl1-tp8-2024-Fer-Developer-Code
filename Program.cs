@@ -74,16 +74,16 @@ do
                         switch (operacionIndividual.OperacionHecha)
                         {
                             case TipoOperacion.Suma:
-                                Console.WriteLine($"\tSuma: {termino} + {operacionIndividual.NuevoValor} = {operacionIndividual.Resultado}");
+                                Console.WriteLine($"\tSuma: {operacionIndividual.Resultado} + {termino} = {operacionIndividual.NuevoValor}");
                                 break;
                                 case TipoOperacion.Resta:
-                                Console.WriteLine($"\tResta: {termino} - {operacionIndividual.NuevoValor} = {operacionIndividual.Resultado}");
+                                Console.WriteLine($"\tResta: {operacionIndividual.Resultado} - {termino} = {operacionIndividual.NuevoValor}");
                                 break;
                                 case TipoOperacion.Multiplicacion:
-                                Console.WriteLine($"\tMultiplicacion: {termino} * {operacionIndividual.NuevoValor} = {operacionIndividual.Resultado}");
+                                Console.WriteLine($"\tMultiplicacion: {operacionIndividual.Resultado} * {termino} = {operacionIndividual.NuevoValor}");
                                 break;
                                 case TipoOperacion.Division:
-                                Console.WriteLine($"\tDivision: {termino} / {operacionIndividual.NuevoValor} = {operacionIndividual.Resultado}");
+                                Console.WriteLine($"\tDivision: {operacionIndividual.Resultado} / {termino} = {operacionIndividual.NuevoValor}");
                                 break;
                                 case TipoOperacion.Limpiar:
                                 Console.WriteLine("\tLimpiar: termino = 0");
