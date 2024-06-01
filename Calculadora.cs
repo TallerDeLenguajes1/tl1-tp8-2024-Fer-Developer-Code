@@ -1,5 +1,5 @@
 using EspacioOperacion;
-
+using espacioTipoOperacion;
 namespace EspacioCalculadora
 {
     public class Calculadora
@@ -14,19 +14,19 @@ namespace EspacioCalculadora
         {
             resultadoAnterior = dato;
             dato += termino;
-            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, espacioTipoOperacion.TipoOperacion.Suma));
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, TipoOperacion.Suma));
         }
         public void Restar(double termino)
         {
             resultadoAnterior = dato;
             dato -= termino;
-            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, espacioTipoOperacion.TipoOperacion.Resta));
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, TipoOperacion.Resta));
         }
         public void Multiplicar(double termino)
         {
             resultadoAnterior = dato;
             dato *= termino;
-            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, espacioTipoOperacion.TipoOperacion.Multiplicacion));
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, TipoOperacion.Multiplicacion));
         }
         public void Dividir(double termino)
         {
@@ -34,7 +34,7 @@ namespace EspacioCalculadora
             if (dato != 0)
             {
                 dato /= termino;
-                HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, espacioTipoOperacion.TipoOperacion.Division));
+                HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, TipoOperacion.Division));
             }
             else
             {
@@ -46,7 +46,7 @@ namespace EspacioCalculadora
         {
             resultadoAnterior = dato;
             dato = 0;
-            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, espacioTipoOperacion.TipoOperacion.Limpiar));
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, TipoOperacion.Limpiar));
         }
     }
 }
