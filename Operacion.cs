@@ -1,3 +1,4 @@
+using espacioTipoOperacion;
 namespace EspacioOperacion
 {
     public class Operacion{

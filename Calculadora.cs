@@ -4,10 +4,11 @@ namespace EspacioCalculadora
 {
     public class Calculadora
     {
-        List<Operacion> operacions = new List<Operacion>();
+        private List<Operacion> Operaciones = new List<Operacion>();
         private double dato;
 
         public double Resultado { get => dato; }
+        public List<Operacion> Operaciones1 { get => Operaciones; set => Operaciones = value; }
 
         public void Sumar(double termino)
         {
