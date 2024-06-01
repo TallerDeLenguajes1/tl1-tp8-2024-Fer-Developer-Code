@@ -76,16 +76,16 @@ do
                             case TipoOperacion.Suma:
                                 Console.WriteLine($"\tSuma: {operacionIndividual.Resultado} + {termino} = {operacionIndividual.NuevoValor}");
                                 break;
-                                case TipoOperacion.Resta:
+                            case TipoOperacion.Resta:
                                 Console.WriteLine($"\tResta: {operacionIndividual.Resultado} - {termino} = {operacionIndividual.NuevoValor}");
                                 break;
-                                case TipoOperacion.Multiplicacion:
+                            case TipoOperacion.Multiplicacion:
                                 Console.WriteLine($"\tMultiplicacion: {operacionIndividual.Resultado} * {termino} = {operacionIndividual.NuevoValor}");
                                 break;
-                                case TipoOperacion.Division:
+                            case TipoOperacion.Division:
                                 Console.WriteLine($"\tDivision: {operacionIndividual.Resultado} / {termino} = {operacionIndividual.NuevoValor}");
                                 break;
-                                case TipoOperacion.Limpiar:
+                            case TipoOperacion.Limpiar:
                                 Console.WriteLine("\tLimpiar: termino = 0");
                                 break;
                         }
