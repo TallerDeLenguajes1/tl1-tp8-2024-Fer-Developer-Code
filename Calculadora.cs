@@ -4,29 +4,37 @@ namespace EspacioCalculadora
 {
     public class Calculadora
     {
-        private List<Operacion> Operaciones = new List<Operacion>();
+        private List<Operacion> operaciones = new List<Operacion>();
         private double dato;
-
+        private double resultadoAnterior;
+        public List<Operacion> HistorialOperaciones { get => operaciones; }
         public double Resultado { get => dato; }
-        public List<Operacion> Operaciones1 { get => Operaciones; set => Operaciones = value; }
 
         public void Sumar(double termino)
         {
+            resultadoAnterior = dato;
             dato += termino;
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, espacioTipoOperacion.TipoOperacion.Suma));
         }
         public void Restar(double termino)
         {
+            resultadoAnterior = dato;
             dato -= termino;
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, espacioTipoOperacion.TipoOperacion.Resta));
         }
         public void Multiplicar(double termino)
         {
+            resultadoAnterior = dato;
             dato *= termino;
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, espacioTipoOperacion.TipoOperacion.Multiplicacion));
         }
         public void Dividir(double termino)
         {
+            resultadoAnterior = dato;
             if (dato != 0)
             {
                 dato /= termino;
+                HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, espacioTipoOperacion.TipoOperacion.Division));
             }
             else
             {
@@ -36,7 +44,9 @@ namespace EspacioCalculadora
         }
         public void Limpiar()
         {
+            resultadoAnterior = dato;
             dato = 0;
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, espacioTipoOperacion.TipoOperacion.Limpiar));
         }
     }
 }
