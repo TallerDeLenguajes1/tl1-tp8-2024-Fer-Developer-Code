@@ -20,5 +20,10 @@ namespace EspacioOperacion
                 return nuevoValor;
             }
         }
+        public TipoOperacion OperacionHecha{
+            get{
+                return operacion;
+            }
+        }
     }
 }
