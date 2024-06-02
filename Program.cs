@@ -4,7 +4,7 @@ using espacioTipoOperacion;
 double termino = 0;
 int opcion;
 string? linea;
-Calculadora calcular = new Calculadora();
+Calculadora calcular = new();
 do
 {
     Console.WriteLine("opciones a elegir\n\t1.Sumar\n\t2.Restar\n\t3.Multiplicar\n\t4.Dividir\n\t5.Limpiar\n\t6.Mostrar historial\n\t7.Salir\nEscriba aca la opcion");
