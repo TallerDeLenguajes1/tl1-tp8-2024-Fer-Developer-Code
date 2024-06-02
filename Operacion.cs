@@ -5,11 +5,13 @@ namespace EspacioOperacion
     {
         private DateTime horaYMinutos;
         private double resultadoAnterior;
+        private double resultadoActual;
         private double nuevoValor;
         private TipoOperacion operacion;
-        public Operacion(double resultadoAnterior, double nuevoValor, TipoOperacion operacion)
+        public Operacion(double resultadoAnterior, double resultadoActual, double nuevoValor, TipoOperacion operacion)
         {
             this.resultadoAnterior = resultadoAnterior;
+            this.resultadoActual = resultadoActual;
             this.nuevoValor = nuevoValor;
             this.operacion = operacion;
             horaYMinutos = new DateTime(1, 1, 1, DateTime.Now.Hour, DateTime.Now.Minute, 0);
@@ -37,5 +39,6 @@ namespace EspacioOperacion
         }
 
         public DateTime HoraYMinutos { get => horaYMinutos; }
+        public double ResultadoActual { get => resultadoActual; }
     }
 }

@@ -75,19 +75,19 @@ do
                         {
                             case TipoOperacion.Suma:
                                 Console.WriteLine($"A las {operacionIndividual.HoraYMinutos.Hour}:{operacionIndividual.HoraYMinutos.Minute.ToString("00")}");
-                                Console.WriteLine($"\tSuma: {operacionIndividual.Resultado} + {termino} = {operacionIndividual.NuevoValor}");
+                                Console.WriteLine($"\tSuma: {operacionIndividual.Resultado} + {operacionIndividual.ResultadoActual} = {operacionIndividual.NuevoValor}");
                                 break;
                             case TipoOperacion.Resta:
                                 Console.WriteLine($"A las {operacionIndividual.HoraYMinutos.Hour}:{operacionIndividual.HoraYMinutos.Minute.ToString("00")}");
-                                Console.WriteLine($"\tResta: {operacionIndividual.Resultado} - {termino} = {operacionIndividual.NuevoValor}");
+                                Console.WriteLine($"\tResta: {operacionIndividual.Resultado} - {operacionIndividual.ResultadoActual} = {operacionIndividual.NuevoValor}");
                                 break;
                             case TipoOperacion.Multiplicacion:
                                 Console.WriteLine($"A las {operacionIndividual.HoraYMinutos.Hour}:{operacionIndividual.HoraYMinutos.Minute.ToString("00")}");
-                                Console.WriteLine($"\tMultiplicacion: {operacionIndividual.Resultado} * {termino} = {operacionIndividual.NuevoValor}");
+                                Console.WriteLine($"\tMultiplicacion: {operacionIndividual.Resultado} * {operacionIndividual.ResultadoActual} = {operacionIndividual.NuevoValor}");
                                 break;
                             case TipoOperacion.Division:
                                 Console.WriteLine($"A las {operacionIndividual.HoraYMinutos.Hour}:{operacionIndividual.HoraYMinutos.Minute.ToString("00")}");
-                                Console.WriteLine($"\tDivision: {operacionIndividual.Resultado} / {termino} = {operacionIndividual.NuevoValor}");
+                                Console.WriteLine($"\tDivision: {operacionIndividual.Resultado} / {operacionIndividual.ResultadoActual} = {operacionIndividual.NuevoValor}");
                                 break;
                             case TipoOperacion.Limpiar:
                                 Console.WriteLine($"A las {operacionIndividual.HoraYMinutos.Hour}:{operacionIndividual.HoraYMinutos.Minute.ToString("00")}");

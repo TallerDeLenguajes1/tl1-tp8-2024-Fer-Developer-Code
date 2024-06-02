@@ -14,19 +14,20 @@ namespace EspacioCalculadora
         {
             resultadoAnterior = dato;
             dato += termino;
-            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, TipoOperacion.Suma));
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, termino, dato, TipoOperacion.Suma));
+
         }
         public void Restar(double termino)
         {
             resultadoAnterior = dato;
             dato -= termino;
-            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, TipoOperacion.Resta));
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, termino, dato, TipoOperacion.Resta));
         }
         public void Multiplicar(double termino)
         {
             resultadoAnterior = dato;
             dato *= termino;
-            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, TipoOperacion.Multiplicacion));
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, termino, dato, TipoOperacion.Multiplicacion));
         }
         public void Dividir(double termino)
         {
@@ -34,7 +35,7 @@ namespace EspacioCalculadora
             if (dato != 0)
             {
                 dato /= termino;
-                HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, TipoOperacion.Division));
+                HistorialOperaciones.Add(new Operacion(resultadoAnterior, termino, dato, TipoOperacion.Division));
             }
             else
             {
@@ -44,9 +45,8 @@ namespace EspacioCalculadora
         }
         public void Limpiar()
         {
-            resultadoAnterior = dato;
             dato = 0;
-            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, TipoOperacion.Limpiar));
+            HistorialOperaciones.Add(new Operacion(resultadoAnterior, dato, dato, TipoOperacion.Limpiar));
         }
     }
 }
