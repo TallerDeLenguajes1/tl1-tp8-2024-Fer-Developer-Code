@@ -2,9 +2,6 @@
 using EspacioOperacion;
 using espacioTipoOperacion;
 double termino = 0;
-using EspacioOperacion;
-using espacioTipoOperacion;
-double termino = 0;
 int opcion;
 string? linea;
 Calculadora calcular = new Calculadora();
@@ -13,26 +10,13 @@ do
     Console.WriteLine("opciones a elegir\n\t1.Sumar\n\t2.Restar\n\t3.Multiplicar\n\t4.Dividir\n\t5.Limpiar\n\t6.Mostrar historial\n\t7.Salir\nEscriba aca la opcion");
     linea = Console.ReadLine();
     if (int.TryParse(linea, out opcion))
-    if (int.TryParse(linea, out opcion))
     {
         if (opcion >= 1 && opcion <= 7)
-        if (opcion >= 1 && opcion <= 7)
         {
-
 
             switch (opcion)
             {
                 case 1:
-                    Console.WriteLine("Ingrese un termino para operar en suma");
-                    linea = Console.ReadLine();
-                    if (double.TryParse(linea, out termino))
-                    {
-                        calcular.Sumar(termino);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ingrese un valor valido para la suma");
-                    }
                     Console.WriteLine("Ingrese un termino para operar en suma");
                     linea = Console.ReadLine();
                     if (double.TryParse(linea, out termino))
@@ -55,16 +39,6 @@ do
                     {
                         Console.WriteLine("Ingrese un valor valido para la resta");
                     }
-                    Console.WriteLine("Ingrese un termino para operar en resta");
-                    linea = Console.ReadLine();
-                    if (double.TryParse(linea, out termino))
-                    {
-                        calcular.Restar(termino);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ingrese un valor valido para la resta");
-                    }
                     break;
                 case 3:
                     Console.WriteLine("Ingrese un termino para operar en multiplicacion");
@@ -77,28 +51,8 @@ do
                     {
                         Console.WriteLine("Ingrese un valor valido para la multiplicacion");
                     }
-                    Console.WriteLine("Ingrese un termino para operar en multiplicacion");
-                    linea = Console.ReadLine();
-                    if (double.TryParse(linea, out termino))
-                    {
-                        calcular.Multiplicar(termino);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ingrese un valor valido para la multiplicacion");
-                    }
                     break;
                 case 4:
-                    Console.WriteLine("Ingrese un termino para operar en division");
-                    linea = Console.ReadLine();
-                    if (double.TryParse(linea, out termino))
-                    {
-                        calcular.Dividir(termino);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ingrese un valor valido para la division");
-                    }
                     Console.WriteLine("Ingrese un termino para operar en division");
                     linea = Console.ReadLine();
                     if (double.TryParse(linea, out termino))
@@ -156,10 +110,6 @@ do
         {
             Console.WriteLine("Ingrese un valor valido");
         }
-    }
-    else
-    {
-        Console.WriteLine("Ingrese una opcion valida");
     }
     else
     {
